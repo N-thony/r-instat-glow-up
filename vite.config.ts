@@ -3,9 +3,11 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
+const repoName = 'r-instat-glow-up';
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: 'r-instat-glow-up',
+  base: `/${repoName}/`,
   server: {
     host: "::",
     port: 8080,
