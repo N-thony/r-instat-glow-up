@@ -29,8 +29,8 @@ const features = [
   },
   {
     icon: Users,
-    title: "Built for Africa",
-    description: "Development led by African talent, designed specifically for the needs of African researchers and students.",
+    title: "African Innovation, Global Impact",
+    description: "African talent-led, serving professional and academic users with increasing global relevance.",
   },
 ];
 
