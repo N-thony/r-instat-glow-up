@@ -83,7 +83,7 @@ const Download = () => {
                 <div className="bg-muted/50 rounded-lg p-6 space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm text-foreground">Windows 10/11 64-bit</span>
+                    <span className="text-sm text-foreground">Windows 7 or later (64-bit)</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
