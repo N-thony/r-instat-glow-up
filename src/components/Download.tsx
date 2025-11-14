@@ -62,14 +62,20 @@ const Download = () => {
                     <DownloadIcon className="mr-2 h-5 w-5" />
                     Download for Windows
                   </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2"
+                  <a
+                    href="https://github.com/IDEMSInternational/R-Instat/releases/tag/v0.8.9"
+                    target="_blank" // Optional: Opens the link in a new tab
+                    rel="noopener noreferrer" // Recommended for security when using target="_blank"
                   >
-                    <FileText className="mr-2 h-5 w-5" />
-                    Release Notes
-                  </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-2"
+                    >
+                      <FileText className="mr-2 h-5 w-5" />
+                      Release Notes
+                    </Button>
+                  </a>
                 </div>
               </div>
 
@@ -113,7 +119,7 @@ const Download = () => {
                   )}
                 </Button>
               </CollapsibleTrigger>
-              
+
               <CollapsibleContent className="mt-6 space-y-6">
                 {/* 64-bit versions */}
                 <div>
