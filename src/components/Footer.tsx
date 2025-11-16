@@ -82,14 +82,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <a href="#"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection("activities");
+
                   }}
-                  className="text-primary hover:text-primary/80 font-medium text-sm underline underline-offset-4 transition-colors"
-                >
+                  className="text-white/70 hover:text-white transition-colors" no-underline>
                   Community Forum
                 </a>
               </li>
