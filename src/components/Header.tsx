@@ -39,7 +39,7 @@ const Header = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
-            {["About", "Features", "Download", "Team", "Contact"].map((item) => (
+            {["About", "Features", "Download", "Team", "Activities", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -72,7 +72,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-navy-light border-t border-white/10">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {["About", "Features", "Download", "Team", "Contact"].map((item) => (
+            {["About", "Features", "Download", "Team", "Activities", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
