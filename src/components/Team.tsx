@@ -20,7 +20,7 @@ const team = [
   { name: "Rachel Stern", role: "Documentation Lead", linkedin: "#", mail:"", github: "", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit-crop", },
   { name: "Anastasia Mbite", role: "Software Developer", linkedin: "#", mail:"", github: "", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit-crop", },
   { name: "Emmanuel Afrifa", role: "Software Developer", linkedin: "#", mail:"", github: "", image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=400&h=400&fit-crop", },
-  //{ name: "Anastasia Mbite", role: "Software Developer", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit-crop", },
+  { name: "Anastasia Mbite", role: "Software Developer", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit-crop", },
   //{ name: "Vitalis Kwambai", role: "Software Developer", image: "https://images.unsplash.com/photo-1557862921-37829c790f19?w=400&h=400&fit-crop", },
   //{ name: "Rachel Stern", role: "Documentation Lead", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit-crop", },
   //{ name: "Emmanuel Afrifa", role: "Software Developer", image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=400&h=400&fit-crop", }
