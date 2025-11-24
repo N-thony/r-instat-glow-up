@@ -70,7 +70,7 @@ const Download = () => {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-2"
+                      className="border-2 hover:bg-gray-100 hover:text-gray-900"
                     >
                       <FileText className="mr-2 h-5 w-5" />
                       Release Notes
