@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,33 @@ const Header = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = ["about", "features", "download", "team", "activities", "contact"];
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -31,9 +59,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center">
-            <h1 className="text-xl lg:text-2xl font-display font-bold text-white cursor-pointer"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
+            <h1 className="text-xl lg:text-2xl font-display font-bold text-white">
               R-Instat
             </h1>
           </div>
@@ -43,9 +69,16 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-white/90 hover:text-white transition-colors text-sm font-medium"
+                className={`relative text-sm font-medium transition-colors pb-1 ${
+                  activeSection === item.toLowerCase()
+                    ? "text-white"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {item}
+                {activeSection === item.toLowerCase() && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary animate-fade-in" />
+                )}
               </button>
             ))}
           </nav>
@@ -76,9 +109,16 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-white/90 hover:text-white transition-colors text-sm font-medium text-left"
+                className={`relative text-sm font-medium transition-colors text-left pb-1 ${
+                  activeSection === item.toLowerCase()
+                    ? "text-white"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {item}
+                {activeSection === item.toLowerCase() && (
+                  <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-primary animate-fade-in" />
+                )}
               </button>
             ))}
           </nav>

@@ -49,7 +49,7 @@ const Hero = () => {
                 onClick={() => window.open("https://www.youtube.com/watch?v=8REhEZqXEM0", "_blank")}
                 size="lg"
                 variant="outline"
-                className="">
+                className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-base px-8 py-6">
                 <PlayCircle className="mr-2 h-5 w-5" />
                 Watch Demo
               </Button>
